@@ -19,3 +19,11 @@
 
 # Go workspace file
 go.work
+
+*.iml
+*.ipr
+*.iws
+.idea/
+/build/
+/dist/
+/out/
