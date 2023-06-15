@@ -344,7 +344,7 @@ func decodeJson(content io.Reader) (interface{}, error) {
 	d.UseNumber()
 	err := d.Decode(&jsonBod)
 	if err != nil {
-		return nil, err
+		return nil, errNotJson
 	}
 	return jsonBod, err
 }
