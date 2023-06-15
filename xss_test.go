@@ -52,7 +52,8 @@ func newServer(defender *Defender) *gin.Engine {
 
 	r := gin.Default()
 
-	r.Use(defender.RemoveXSS())
+	//r.Use(defender.RemoveXSS())
+	r.Use(defender.FilterXSS())
 
 	r.GET("/user/:id", func(c *gin.Context) {
 		c.String(200, fmt.Sprintf("%v", c.Request.Body))
